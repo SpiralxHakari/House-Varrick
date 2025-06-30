@@ -6,7 +6,6 @@ const bootLines = [
   "Loading environment modules...",
   "Mounting virtual drives...",
   "System integrity: Nominal",
-  "Welcome, Agent VARRICK",
   "Launching Dashboard Interface..."
 ];
 
@@ -20,7 +19,7 @@ function typeLine() {
   if (i < bootLines.length) {
     bootOutput.innerHTML += bootLines[i] + "\n";
     i++;
-    setTimeout(typeLine, 600); // Adjust speed here
+    setTimeout(typeLine, 30); // Adjust speed here
   } else {
     // After boot sequence, fade into dashboard
     setTimeout(() => {
