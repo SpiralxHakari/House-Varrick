@@ -2,7 +2,7 @@ const bootLines = [
   "Initializing Starhaven OS v7.9...",
   "Connecting to House Varrick SecureNet...",
   "Verifying clearance level...",
-  "Clearance verified: Level Ω",
+  "Clearance verified...",
   "Loading environment modules...",
   "Mounting virtual drives...",
   "System integrity: Nominal",
@@ -26,6 +26,7 @@ function typeLine() {
     setTimeout(() => {
       bootScreen.classList.add("hidden");
       dashboard.classList.remove("hidden");
+      dashboard.classList.add("loaded");
     }, 1500);
   }
 }
