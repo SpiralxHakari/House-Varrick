@@ -7,15 +7,24 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="dashboard-body">
-  <div class="dashboard-container">
+
+  <!-- Boot terminal -->
+  <div id="boot-screen" class="terminal">
+    <pre id="boot-output"></pre>
+  </div>
+
+  <!-- Real dashboard hidden at first -->
+  <div id="dashboard-content" class="dashboard-container hidden">
     <h1>Welcome to the House Varrick Command Dashboard</h1>
     <p>This is your secure command interface. More modules coming soon.</p>
-    
+
     <div class="placeholder-windows">
       <div class="app-window">📁 Secure Docs (Coming Soon)</div>
       <div class="app-window">💬 Internal Chat (Coming Soon)</div>
       <div class="app-window">🌐 SIPR Browser (Coming Soon)</div>
     </div>
   </div>
+
+  <script src="main.js"></script>
 </body>
 </html>
