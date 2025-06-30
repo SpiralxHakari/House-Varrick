@@ -94,3 +94,18 @@ body {
   overflow: hidden;
   white-space: pre-wrap;
 }
+
+#house-crest {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+  width: 80px;
+  height: auto;
+}
+
+#house-crest img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(2px 2px 5px black);
+}
