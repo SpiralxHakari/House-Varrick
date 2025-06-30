@@ -4,7 +4,7 @@ const lines = [
   ">> VERIFICATION TOKEN ACCEPTED\n",
   ">> CROSSCHECKING ASSIGNED CREDENTIALS...\n",
   ">> HOUSE VARRICK ID CONFIRMED\n",
-  ">> LEVEL 3 ACCESS GRANTED\n"
+  ">> SECURE ACCESS GRANTED\n"
 ];
 
 const typewriter = document.getElementById("typewriter");
