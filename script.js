@@ -3,8 +3,7 @@ const lines = [
   ">> INITIATING CLEARANCE PROTOCOL...\n",
   ">> VERIFICATION TOKEN ACCEPTED\n",
   ">> CROSSCHECKING ASSIGNED CREDENTIALS...\n",
-  ">> HOUSE VARRICK ID CONFIRMED\n",
-  ">> SECURE ACCESS GRANTED\n"
+  ">> HOUSE VARRICK ID CONFIRMED\n"
 ];
 
 const typewriter = document.getElementById("typewriter");
