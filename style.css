@@ -125,3 +125,14 @@ body {
     filter: drop-shadow(0 0 5px black);
   }
 }
+
+#cursor {
+  animation: blink 1s step-start infinite;
+  color: #ffa600; /* match your House gold if desired */
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
