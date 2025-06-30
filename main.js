@@ -16,10 +16,18 @@ const bootScreen = document.getElementById("boot-screen");
 let i = 0;
 
 function typeLine() {
-  if (i < bootLines.length) {
-    bootOutput.innerHTML += bootLines[i] + "\n";
-    i++;
-    setTimeout(typeLine, 30); // Adjust speed here
+  if (lineIndex < bootLines.length) {
+    const line = bootLines[lineIndex];
+    if (charIndex < line.length) {
+      bootOutput.innerHTML += line[charIndex];
+      charIndex++;
+      setTimeout(typeLine, 30); // character typing speed
+    } else {
+      bootOutput.innerHTML += "\n";
+      lineIndex++;
+      charIndex = 0;
+      setTimeout(typeLine, 200); // delay between lines
+    }
   } else {
     // After boot sequence, fade into dashboard
     setTimeout(() => {
