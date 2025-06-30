@@ -96,16 +96,20 @@ body {
 }
 
 #house-crest {
-  position: fixed;
+  position: absolute;
   top: 20px;
   left: 20px;
-  z-index: 1000;
   width: 80px;
-  height: auto;
+  opacity: 0;
+  transition: opacity 2s ease-in;
 }
 
 #house-crest img {
   width: 100%;
   height: auto;
   filter: drop-shadow(2px 2px 5px black);
+}
+
+#dashboard.loaded #house-crest {
+  opacity: 1;
 }
