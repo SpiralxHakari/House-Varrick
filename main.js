@@ -9,24 +9,25 @@ const bootLines = [
   "Launching Dashboard Interface..."
 ];
 
-const bootOutput = document.getElementById("boot-output");
+const typedText = document.getElementById("typed-text");
 const dashboard = document.getElementById("dashboard-content");
 const bootScreen = document.getElementById("boot-screen");
 
-let i = 0;
+let lineIndex = 0;
+let charIndex = 0;
 
 function typeLine() {
   if (lineIndex < bootLines.length) {
     const line = bootLines[lineIndex];
     if (charIndex < line.length) {
-      bootOutput.innerHTML += line[charIndex];
+      typedText.textContent += line[charIndex];
       charIndex++;
-      setTimeout(typeLine, 30); // character typing speed
+      setTimeout(typeLine, 30);
     } else {
-      bootOutput.innerHTML += "\n";
+      typedText.textContent += "\n";
       lineIndex++;
       charIndex = 0;
-      setTimeout(typeLine, 200); // delay between lines
+      setTimeout(typeLine, 200);
     }
   } else {
     // After boot sequence, fade into dashboard
