@@ -46,3 +46,4 @@ function showAccessPopup() {
 window.onload = () => {
   typeLine();
 };
+
