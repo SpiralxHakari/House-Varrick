@@ -22,16 +22,20 @@
 }
 
 .app-window {
-  background-color: white;
-  color: #000;
-  border: 2px solid #ffa600;
-  padding: 20px;
-  width: 250px;
-  height: 120px;
-  box-shadow: 0 0 10px #000;
-  font-weight: bold;
-  margin-bottom: 20px;
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  background-color: #fff;
+  border: 2px solid #ffa500;
   border-radius: 8px;
+  padding: 1rem;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  max-width: 400px;
+  min-width: 300px;
+  font-family: monospace;
 }
 
 #house-crest {
@@ -159,4 +163,20 @@
 .sidebar-item {
   padding: 10px 15px;
   border-bottom: 1px solid #ffa500;
+}
+
+.window-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.window-header button.close-window {
+  background-color: #ddd;
+  border: none;
+  border-radius: 3px;
+  padding: 0 0.4rem;
+  cursor: pointer;
 }
