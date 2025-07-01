@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="dashboard-body">
-
   <!-- Boot terminal -->
   <div id="boot-screen" class="terminal">
     <pre id="boot-output"><span id="typed-text"></span><span id="cursor">|</span></pre>
@@ -29,6 +28,16 @@
     </div>
   </div>
 
+    <div id="sidebar">
+    <button onclick="openApp('docs')">📁 Secure Docs</button>
+    <button onclick="openApp('chat')">💬 Internal Chat</button>
+    <button onclick="openApp('sipr')">🌐 SIPR Browser</button>
+  </div>
+
+  <div id="window-area">
+  <!-- App windows will appear here -->
+  </div>
+  
   <script src="main.js"></script>
 </body>
 </html>
