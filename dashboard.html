@@ -10,9 +10,9 @@
   <!-- Sidebar -->
   <div id="sidebar" class="collapsed">
 <div class="sidebar-buttons">
-  <button onclick="openApp('journal-app')">📓 Journal</button>
-  <button onclick="openApp('settings-app')">⚙️ Settings</button>
-  <button onclick="openApp('contacts-app')">📇 Contacts</button>
+  <button onclick="openApp('journal')">📓 Journal</button>
+  <button onclick="openApp('settings')">⚙️ Settings</button>
+  <button onclick="openApp('contacts')">📇 Contacts</button>
 </div>
 
   <!-- Toggle Sidebar Button -->
@@ -31,73 +31,6 @@
   <button onclick="openApp('secure-docs')">📁 Secure Docs</button>
   <button onclick="openApp('chat')">💬 Chat</button>
   <button onclick="openApp('sipr')">🌐 SIPR</button>
-  
-  <!-- Secure Docs -->
-  <div class="app-window" id="secure-docs-app">
-    <div class="window-header">
-      <span>📁 Secure Docs</span>
-      <button class="close-window">&times;</button>
-    </div>
-    <div class="window-content">
-      <p>This module is coming soon.</p>
-    </div>
-  </div>
-
-  <!-- Internal Chat -->
-  <div class="app-window" id="comms-app">
-    <div class="window-header">
-      <span>💬 Internal Chat</span>
-      <button class="close-window">&times;</button>
-    </div>
-    <div class="window-content">
-      <p>Messaging not yet enabled.</p>
-    </div>
-  </div>
-
-  <!-- SIPR Browser -->
-  <div class="app-window" id="sipr-app">
-    <div class="window-header">
-      <span>🌐 SIPR Browser</span>
-      <button class="close-window">&times;</button>
-    </div>
-    <div class="window-content">
-      <p>Browser simulator loading...</p>
-    </div>
-  </div>
-
-    <!-- Journal -->
-  <div class="app-window" id="journal-app">
-    <div class="window-header">
-      <span>📓 Encrypted Journal</span>
-      <button class="close-window">&times;</button>
-    </div>
-    <div class="window-content">
-      <textarea id="journal-entry" placeholder="Type your journal here..."></textarea>
-      <button onclick="saveJournal()">Save Entry</button>
-    </div>
-  </div>
-
-  <!-- Settings -->
-  <div class="app-window" id="settings-app">
-    <div class="window-header">
-      <span>⚙️ Settings</span>
-      <button class="close-window">&times;</button>
-    </div>
-    <div class="window-content">
-      <p>Settings interface coming soon.</p>
-    </div>
-  </div>
-
-  <!-- Contacts -->
-  <div class="app-window" id="contacts-app">
-    <div class="window-header">
-      <span>📇 Contacts</span>
-      <button class="close-window">&times;</button>
-    </div>
-    <div class="window-content">
-      <p>Contact list will appear here.</p>
-    </div>
-  </div>
 </div>
     
   <script src="dashboard.js"></script>
