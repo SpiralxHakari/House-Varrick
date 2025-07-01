@@ -8,10 +8,9 @@
 </head>
 <body class="dashboard-body">
   <!-- Sidebar -->
-  <!-- Toggle Sidebar Button -->
-  <button id="toggle-sidebar">☰</button>
-  
   <div id="sidebar" class="collapsed">
+    <!-- Toggle Sidebar Button -->
+	<button id="toggle-sidebar">☰</button>
     <div class="sidebar-buttons">
       <!-- ... sidebar buttons ... -->
       <button onclick="openApp('journal')">📓 Journal</button>
@@ -28,14 +27,12 @@
     <div id="main-content">
       <h1>Welcome to the House Varrick Command Dashboard</h1>
       <p>This is your secure command interface. More modules coming soon.</p>
+	  <div id="window-area" class="button-group">
+	  	<button onclick="openApp('secure-docs')">📁 Secure Docs</button>
+		<button onclick="openApp('chat')">💬 Chat</button>
+		<button onclick="openApp('sipr')">🌐 SIPR</button>
+	  </div>
     </div>
-
-    <!-- App Windows Area -->
-<div id="window-area" class="button-group">
-  <button onclick="openApp('secure-docs')">📁 Secure Docs</button>
-  <button onclick="openApp('chat')">💬 Chat</button>
-  <button onclick="openApp('sipr')">🌐 SIPR</button>
-</div>
     
   <script src="dashboard.js"></script>
 </body>
