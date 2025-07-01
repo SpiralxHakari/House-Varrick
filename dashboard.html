@@ -28,14 +28,17 @@
     </div>
   </div>
 
-    <div id="sidebar">
-    <button onclick="openApp('docs')">📁 Secure Docs</button>
-    <button onclick="openApp('chat')">💬 Internal Chat</button>
-    <button onclick="openApp('sipr')">🌐 SIPR Browser</button>
-  </div>
-
   <div id="window-area">
   <!-- App windows will appear here -->
+  </div>
+
+  <div id="sidebar" class="collapsed">
+    <button id="toggle-sidebar">☰</button>
+    <div class="sidebar-buttons">
+      <button onclick="openApp('docs')">📁 Secure Docs</button>
+      <button onclick="openApp('chat')">💬 Internal Chat</button>
+      <button onclick="openApp('sipr')">🌐 SIPR Browser</button>
+    </div>
   </div>
   
   <script src="main.js"></script>
