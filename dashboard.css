@@ -13,12 +13,11 @@
   text-align: center;
 }
 
-.placeholder-windows {
+.dashboard-content {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  margin-top: 30px;
-  gap: 20px;
+  align-items: flex-start; /* aligns to top instead of middle */
+  padding-top: 40px;       /* add spacing as needed */
 }
 
 .app-window {
@@ -85,21 +84,17 @@
 }
 
 #toggle-sidebar {
-  position: absolute;
+  position: fixed;
   top: 10px;
-  left: 0;
-  width: 40px; /* make it narrow */
-  height: 35px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
   background-color: orange;
+  color: black;
+  font-size: 24px;
   border: none;
-  border-radius: 5px;
-  font-size: 20px;
-  padding: 5px;
   cursor: pointer;
   z-index: 1001;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 #toggle-sidebar:hover {
@@ -134,7 +129,6 @@
 #dashboard-content {
   margin-left: 200px;
   padding: 20px;
-  text-align: center;
 }
 
 #window-area {
