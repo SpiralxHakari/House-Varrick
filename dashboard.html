@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="dashboard-body">
+
   <!-- Boot terminal -->
   <div id="boot-screen" class="terminal">
     <pre id="boot-output"><span id="typed-text"></span><span id="cursor">|</span></pre>
@@ -29,11 +30,11 @@
     </div>
   </div>
 
-  <div id="window-area">
   <!-- App windows will appear here -->
-  </div>
+  <div id="window-area"></div>
 
-  <div id="sidebar" class="collapsed">
+  <!-- Sidebar initially hidden and collapsed -->
+  <div id="sidebar" class="collapsed hidden">
     <button id="toggle-sidebar" class="menu-btn">
       <i class="fas fa-bars"></i>
     </button>
@@ -43,7 +44,7 @@
       <button onclick="openApp('sipr')">🌐 SIPR Browser</button>
     </div>
   </div>
-  
+
   <script src="main.js"></script>
 </body>
 </html>
