@@ -70,3 +70,8 @@ function closeApp(appId) {
   const win = document.getElementById(`app-${appId}`);
   if (win) win.remove();
 }
+
+document.getElementById("toggle-sidebar").addEventListener("click", () => {
+  const sidebar = document.getElementById("sidebar");
+  sidebar.classList.toggle("collapsed");
+});
