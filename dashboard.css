@@ -22,20 +22,15 @@
 }
 
 .app-window {
-  display: none; /* Hidden by default */
-  position: fixed;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -25%);
-  background-color: #fff;
-  border: 2px solid #ffa500;
-  border-radius: 8px;
-  padding: 1rem;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  background: #222;
+  border: 1px solid #555;
+  padding: 1em;
+  color: white;
+  width: 300px;
   z-index: 1000;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
-  max-width: 400px;
-  min-width: 300px;
-  font-family: monospace;
 }
 
 #house-crest {
@@ -136,16 +131,17 @@
   margin-top: 20px;
 }
 
+
 .app-header {
-  background-color: #ffa600;
-  padding: 10px;
   font-weight: bold;
   display: flex;
   justify-content: space-between;
+  background: #333;
+  padding: 0.5em;
 }
 
 .app-body {
-  padding: 15px;
+  padding: 0.5em;
 }
 
 .sidebar {
