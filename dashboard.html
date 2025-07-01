@@ -3,48 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>House Varrick Dashboard</title>
+  <title>Starhaven OS Dashboard</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="dashboard-body">
 
-  <!-- Boot terminal -->
-  <div id="boot-screen" class="terminal">
-    <pre id="boot-output"><span id="typed-text"></span><span id="cursor">|</span></pre>
+  <!-- Boot Screen -->
+  <div id="boot-screen">
+    <div class="terminal">
+      <pre id="typed-text"></pre><span id="cursor">█</span>
+    </div>
   </div>
 
-  <!-- Real dashboard hidden at first -->
-  <div id="dashboard-content" class="dashboard-container hidden">
+  <!-- Dashboard Content (initially hidden) -->
+  <div id="dashboard-content" class="hidden">
+    
     <!-- House Crest -->
     <div id="house-crest">
-      <img src="crest.png" alt="House Varrick Crest" />
+      <img src="crest.png" alt="House Crest">
     </div>
-    <h1>Welcome to the House Varrick Command Dashboard</h1>
-    <p>This is your secure command interface. More modules coming soon.</p>
 
-    <div class="placeholder-windows">
-      <div class="app-window">📁 Secure Docs (Coming Soon)</div>
-      <div class="app-window">💬 Internal Chat (Coming Soon)</div>
-      <div class="app-window">🌐 SIPR Browser (Coming Soon)</div>
+    <!-- Sidebar -->
+    <div id="sidebar" class="collapsed">
+      <div class="sidebar-buttons">
+        <button onclick="openApp('journal')">Journal</button>
+        <button onclick="openApp('communications')">Comms</button>
+        <button onclick="openApp('files')">Files</button>
+      </div>
     </div>
-  </div>
 
-  <!-- App windows will appear here -->
-  <div id="window-area"></div>
+    <!-- Toggle Button for Sidebar -->
+    <button id="toggle-sidebar">☰</button>
 
-  <!-- Sidebar initially hidden and collapsed -->
-  <div id="sidebar" class="collapsed hidden">
-    <button id="toggle-sidebar" class="menu-btn">
-      <i class="fas fa-bars"></i>
-    </button>
-    <div class="sidebar-buttons">
-      <button onclick="openApp('docs')">📁 Secure Docs</button>
-      <button onclick="openApp('chat')">💬 Internal Chat</button>
-      <button onclick="openApp('sipr')">🌐 SIPR Browser</button>
+    <!-- Main Dashboard Area -->
+    <div id="window-area">
+      <!-- App windows will be dynamically inserted here -->
     </div>
   </div>
 
+  <!-- JavaScript -->
   <script src="main.js"></script>
 </body>
 </html>
