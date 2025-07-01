@@ -30,7 +30,7 @@ function typeLine() {
       typedText.textContent += "\n";
       lineIndex++;
       charIndex = 0;
-      setTimeout(typeLine, 200);
+      setTimeout(typeLine, 400);
     }
   } else {
     // After boot sequence, fade into dashboard
