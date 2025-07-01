@@ -3,16 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Starhaven OS Dashboard</title>
+  <title>House Varrick Dashboard</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="dashboard-body">
 
   <!-- Boot Screen -->
-  <div id="boot-screen">
-    <div class="terminal">
-      <pre id="typed-text"></pre><span id="cursor">|</span>
-    </div>
+ <div id="boot-screen" class="terminal">
+    <pre id="boot-output"><span id="typed-text"></span><span id="cursor">|</span></pre>
   </div>
 
   <!-- Dashboard Content (initially hidden) -->
@@ -20,8 +19,17 @@
     
     <!-- House Crest -->
     <div id="house-crest">
-      <img src="crest.png" alt="House Crest">
+      <img src="crest.png" alt="House Varrick Crest" />
     </div>
+    <h1>Welcome to the House Varrick Command Dashboard</h1>
+    <p>This is your secure command interface. More modules coming soon.</p>
+
+    <div class="placeholder-windows">
+      <div class="app-window">📁 Secure Docs (Coming Soon)</div>
+      <div class="app-window">💬 Internal Chat (Coming Soon)</div>
+      <div class="app-window">🌐 SIPR Browser (Coming Soon)</div>
+    </div>
+  </div>
 
     <!-- Sidebar -->
     <div id="sidebar" class="collapsed">
