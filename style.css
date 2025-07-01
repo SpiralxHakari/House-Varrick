@@ -136,3 +136,55 @@ body {
     opacity: 0;
   }
 }
+
+#sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 100%;
+  background-color: #73160d;
+  padding: 10px;
+  border-right: 2px solid #ffa600;
+  z-index: 100;
+}
+
+#sidebar button {
+  display: block;
+  background-color: #ffa600;
+  color: #000;
+  border: none;
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+}
+
+#dashboard-content {
+  margin-left: 200px;
+  padding: 20px;
+}
+
+#window-area {
+  margin-top: 20px;
+}
+
+.app-window {
+  background-color: white;
+  border: 2px solid #ffa600;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #000;
+}
+
+.app-header {
+  background-color: #ffa600;
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+}
+
+.app-body {
+  padding: 15px;
+}
