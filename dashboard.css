@@ -89,8 +89,8 @@
   top: 10px;
   left: 0; /* Sticks it to the left edge */
   transform: translateX(-100%); /* Pulls it to the left of sidebar */
-  width: 40px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   font-size: 1.2rem;
   background-color: orange;
   border: none;
