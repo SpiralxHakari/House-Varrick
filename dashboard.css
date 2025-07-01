@@ -85,22 +85,28 @@
 }
 
 #toggle-sidebar {
-  position: fixed;
+  position: absolute;
   top: 10px;
-  right: 200px; /* this matches the sidebar's width */
-  background: orange;
+  right: 10px;
+  width: 40px;     /* ⬅️ Make it smaller */
+  height: 30px;
+  padding: 0;
+  font-size: 1.2rem;
+  background-color: orange;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
-  padding: 5px 10px;
-  font-size: 18px;
-  border-radius: 5px 0 0 5px;
-  z-index: 1001;
-  transition: right 0.3s ease;
+}
+
+#toggle-sidebar:hover {
+  background-color: darkorange;
 }
 
 /* Move it to the edge of the screen when collapsed */
 #sidebar.collapsed + #toggle-sidebar {
   right: 0;
+  width: 0;
+  overflow: hidden;
 }
 
 .sidebar-buttons {
@@ -178,4 +184,11 @@
   border-radius: 3px;
   padding: 0 0.4rem;
   cursor: pointer;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1em;
 }
