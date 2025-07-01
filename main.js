@@ -22,7 +22,7 @@ function typeLine() {
     if (charIndex < line.length) {
       typedText.textContent += line[charIndex];
       charIndex++;
-      setTimeout(typeLine, 60);
+      setTimeout(typeLine, 90);
     } else {
       typedText.textContent += "\n";
       lineIndex++;
