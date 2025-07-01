@@ -87,9 +87,9 @@
 }
 
 #toggle-sidebar {
-  position: absolute;
-  right: 200px;
+  position: fixed;
   top: 10px;
+  right: 200px; /* this matches the sidebar's width */
   background: orange;
   border: none;
   cursor: pointer;
@@ -97,6 +97,12 @@
   font-size: 18px;
   border-radius: 5px 0 0 5px;
   z-index: 1001;
+  transition: right 0.3s ease;
+}
+
+/* Move it to the edge of the screen when collapsed */
+#sidebar.collapsed + #toggle-sidebar {
+  right: 0;
 }
 
 .sidebar-buttons {
