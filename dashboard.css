@@ -5,6 +5,7 @@
   font-family: 'Courier New', Courier, monospace;
   margin: 0;
   padding: 20px;
+  text-align: center;
 }
 
 .dashboard-content {
@@ -131,6 +132,7 @@
 #dashboard-content {
   margin-left: 200px;
   padding: 20px;
+  text-align: center;
 }
 
 #window-area {
