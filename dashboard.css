@@ -87,14 +87,20 @@
 #toggle-sidebar {
   position: absolute;
   top: 10px;
-  left: 0; /* Sticks it to the left edge */
-  transform: translateX(-100%); /* Pulls it to the left of sidebar */
-  font-size: 1.2rem;
+  left: 0;
+  transform: translateX(-100%);
+  width: 40px; /* make it narrow */
+  height: 35px;
   background-color: orange;
   border: none;
   border-radius: 5px;
+  font-size: 20px;
+  padding: 5px;
   cursor: pointer;
   z-index: 1001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #toggle-sidebar:hover {
@@ -191,4 +197,22 @@
   justify-content: center;
   gap: 10px;
   margin-top: 1em;
+}
+
+#main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  padding: 2rem;
+  margin-left: 0; /* will shift if sidebar overlays */
+  transition: margin-left 0.3s ease;
+}
+
+.button-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
 }
