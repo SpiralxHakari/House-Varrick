@@ -66,13 +66,14 @@
 }
 
 #sidebar {
-  position: absolute;
+  position: fixed; /* fixed makes it detach from flow properly */
   right: 0;
   top: 0;
   height: 100%;
   width: 200px;
   background-color: #4a0c0c;
   border-left: 2px solid orange;
+  transform: translateX(0); /* visible by default */
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -82,7 +83,7 @@
 }
 
 #sidebar.collapsed {
-  transform: translateX(100%);
+  transform: translateX(200px); /* hide it off-screen to the right */
 }
 
 #toggle-sidebar {
