@@ -193,14 +193,12 @@
 }
 
 #main-content {
+  padding: 30px 60px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  align-items: center;    /* horizontal center */
+  justify-content: flex-start; /* top-aligned */
   min-height: 100vh;
-  padding: 2rem;
-  margin-left: 0; /* will shift if sidebar overlays */
-  transition: margin-left 0.3s ease;
+  text-align: center;
 }
 
