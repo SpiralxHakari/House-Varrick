@@ -37,7 +37,7 @@ function showAccessPopup() {
   setTimeout(() => {
     blackout.classList.remove("hidden");
     setTimeout(() => {
-      window.location.href = "dashboard.html"; // or whatever your next page is
+      window.location.href = "boot.html"; // or whatever your next page is
     }, 1500);
   }, 2000); // time before blackout
 }
