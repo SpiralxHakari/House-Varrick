@@ -22,24 +22,16 @@
 }
 
 .app-window {
-  background-color: #fff;
+  background-color: white;
   color: #000;
   border: 2px solid #ffa600;
   padding: 20px;
   width: 250px;
   height: 120px;
-  box-shadow: 0 0 10px #ffa600;
+  box-shadow: 0 0 10px #000;
   font-weight: bold;
-}
-
-.terminal {
-  background-color: black;
-  color: #00ff00;
-  font-family: monospace;
-  padding: 30px;
-  height: 100vh;
-  overflow: hidden;
-  white-space: pre-wrap;
+  margin-bottom: 20px;
+  border-radius: 8px;
 }
 
 #house-crest {
@@ -73,17 +65,6 @@
   }
 }
 
-#cursor {
-  animation: blink 1s step-start infinite;
-  color: #ffa600; /* match your House gold if desired */
-}
-
-@keyframes blink {
-  50% {
-    opacity: 0;
-  }
-}
-
 #sidebar {
   position: absolute;
   right: 0;
@@ -106,7 +87,7 @@
 
 #toggle-sidebar {
   position: absolute;
-  left: -30px;
+  right: 200px;
   top: 10px;
   background: orange;
   border: none;
@@ -124,20 +105,15 @@
   padding: 10px;
 }
 
-.sidebar-buttons button {
-  margin-bottom: 10px;
-  width: 100%;
-}
-
+.sidebar-buttons button,
 #sidebar button {
-  display: block;
   background-color: #ffa600;
   color: #000;
   border: none;
-  margin: 10px 0;
   padding: 10px;
   width: 100%;
   cursor: pointer;
+  margin: 10px 0;
 }
 
 #dashboard-content {
@@ -147,14 +123,6 @@
 
 #window-area {
   margin-top: 20px;
-}
-
-.app-window {
-  background-color: white;
-  border: 2px solid #ffa600;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px #000;
 }
 
 .app-header {
@@ -170,8 +138,8 @@
 }
 
 .sidebar {
-  background-color: #400000; /* dark shade of red */
-  padding-top: 60px; /* makes room for hamburger menu */
+  background-color: #400000;
+  padding-top: 60px;
   width: 200px;
   position: fixed;
   top: 0;
