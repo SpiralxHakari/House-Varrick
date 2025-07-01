@@ -1,10 +1,10 @@
 const bootLines = [
   "Initializing Starhaven OS v7.9...",
   "Connecting to House Varrick SecureNet...",
-  "[**********]",
+  "[****************************************]",
   "Connected...",
   "Verifying clearance level...",
-  "[**********]",
+  "[****************************************]",
   "Clearance verified...",
   "Loading environment modules...",
   "Mounting virtual drives...",
