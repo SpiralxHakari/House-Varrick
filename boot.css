@@ -1,0 +1,18 @@
+body {
+  background-color: black;
+  color: #00ff00;
+  font-family: monospace;
+  margin: 0;
+  padding: 30px;
+}
+
+#cursor {
+  animation: blink 1s step-start infinite;
+  color: #ffa600;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
