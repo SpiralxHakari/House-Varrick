@@ -87,15 +87,16 @@
 #toggle-sidebar {
   position: absolute;
   top: 10px;
-  right: 200px;
-  width: 40px;     /* ⬅️ Make it smaller */
+  left: 0; /* Sticks it to the left edge */
+  transform: translateX(-100%); /* Pulls it to the left of sidebar */
+  width: 40px;
   height: 30px;
-  padding: 0;
   font-size: 1.2rem;
   background-color: orange;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  z-index: 1001;
 }
 
 #toggle-sidebar:hover {
