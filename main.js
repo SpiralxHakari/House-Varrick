@@ -25,31 +25,33 @@ function typeLine() {
     if (charIndex < line.length) {
       typedText.textContent += line[charIndex];
       charIndex++;
-      setTimeout(typeLine, 120);
+      setTimeout(typeLine, 80); // Faster typing for smoother UX
     } else {
       typedText.textContent += "\n";
       lineIndex++;
       charIndex = 0;
-      setTimeout(typeLine, 400);
+      setTimeout(typeLine, 300); // Pause between lines
     }
   } else {
-    // After boot sequence, fade into dashboard
+    // After typing finishes
     setTimeout(() => {
       bootScreen.classList.add("hidden");
       dashboard.classList.remove("hidden");
       dashboard.classList.add("loaded");
-    }, 1500);
+    }, 1200);
   }
 }
 
-window.onload = () => {
+// Boot sequence starts on load
+window.addEventListener("load", () => {
   typeLine();
-};
+});
 
+// Open an app window (prevent duplicates)
 function openApp(appId) {
   const windowArea = document.getElementById("window-area");
-
-  if (document.getElementById(`app-${appId}`)) return; // prevent duplicates
+  const existing = document.getElementById(`app-${appId}`);
+  if (existing) return;
 
   const win = document.createElement("div");
   win.className = "app-window";
@@ -66,12 +68,18 @@ function openApp(appId) {
   windowArea.appendChild(win);
 }
 
+// Close an app window
 function closeApp(appId) {
   const win = document.getElementById(`app-${appId}`);
   if (win) win.remove();
 }
 
-document.getElementById("toggle-sidebar").addEventListener("click", () => {
+// Sidebar toggle button
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById("toggle-sidebar");
   const sidebar = document.getElementById("sidebar");
-  sidebar.classList.toggle("collapsed");
+
+  toggleBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("collapsed");
+  });
 });
