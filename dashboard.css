@@ -80,21 +80,21 @@
 }
 
 #sidebar.collapsed {
-  transform: translateX(200px); /* hide it off-screen to the right */
+  transform: translateX(100%); /* hide it off-screen to the right */
 }
 
 #toggle-sidebar {
   position: fixed;
   top: 10px;
-  left: 10px;
-  width: 40px;
-  height: 40px;
+  right: 0;
+  transform: translateX(100%); /* visually attach to sidebar */
+  z-index: 1100;
   background-color: orange;
   color: black;
-  font-size: 24px;
   border: none;
+  padding: 10px;
+  font-size: 20px;
   cursor: pointer;
-  z-index: 1001;
 }
 
 #toggle-sidebar:hover {
