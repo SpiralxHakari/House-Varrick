@@ -6,16 +6,24 @@ function openApp(appId) {
   const win = document.createElement("div");
   win.className = "app-window";
   win.id = `app-${appId}`;
+  
+  // Optional: Set random or offset position so windows don't stack
+  const offset = document.querySelectorAll('.app-window').length * 30;
+  win.style.top = `${100 + offset}px`;
+  win.style.left = `${100 + offset}px`;
+  win.style.position = "absolute"; // Ensure it's positioned!
   win.innerHTML = `
     <div class="app-header">
       <span>${getAppTitle(appId)}</span>
-      <button onclick="closeApp('${appId}')">✖</button>
+      <button onclick="closeApp('${appId}')">X</button>
     </div>
     <div class="app-body">
-      ${getAppContent(appId)}
+      <p>Loading ${appId} module...</p>
     </div>
   `;
+
   windowArea.appendChild(win);
+  makeDraggable(win); // 👈 Enable dragging
 }
 
 function closeApp(appId) {
@@ -63,5 +71,28 @@ document.addEventListener("DOMContentLoaded", () => {
   toggleBtn.addEventListener("click", () => {
     sidebar.classList.toggle("collapsed");
   });
+
+  function makeDraggable(win) {
+  const header = win.querySelector(".app-header");
+  let offsetX = 0, offsetY = 0, isDown = false;
+
+  header.style.cursor = "move";
+  header.addEventListener("mousedown", (e) => {
+    isDown = true;
+    offsetX = e.clientX - win.offsetLeft;
+    offsetY = e.clientY - win.offsetTop;
+    win.style.zIndex = 1000; // Bring to front
+  });
+
+  document.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    win.style.left = `${e.clientX - offsetX}px`;
+    win.style.top = `${e.clientY - offsetY}px`;
+  });
+
+  document.addEventListener("mouseup", () => {
+    isDown = false;
+  });
+}
 });
 
