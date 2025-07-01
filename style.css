@@ -221,3 +221,20 @@ body {
 .app-body {
   padding: 15px;
 }
+
+.sidebar {
+  background-color: #400000; /* dark shade of red */
+  padding-top: 60px; /* makes room for hamburger menu */
+  width: 200px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.sidebar-item {
+  padding: 10px 15px;
+  border-bottom: 1px solid #ffa500;
+}
