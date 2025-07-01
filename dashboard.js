@@ -6,24 +6,24 @@ function openApp(appId) {
   const win = document.createElement("div");
   win.className = "app-window";
   win.id = `app-${appId}`;
-  
-  // Optional: Set random or offset position so windows don't stack
+
   const offset = document.querySelectorAll('.app-window').length * 30;
   win.style.top = `${100 + offset}px`;
   win.style.left = `${100 + offset}px`;
-  win.style.position = "absolute"; // Ensure it's positioned!
+  win.style.position = "absolute";
+
   win.innerHTML = `
     <div class="app-header">
       <span>${getAppTitle(appId)}</span>
       <button onclick="closeApp('${appId}')">X</button>
     </div>
     <div class="app-body">
-      <p>Loading ${appId} module...</p>
+      ${getAppContent(appId)}
     </div>
   `;
 
   windowArea.appendChild(win);
-  makeDraggable(win); // 👈 Enable dragging
+  makeDraggable(win); // ✅ works now!
 }
 
 function closeApp(appId) {
@@ -31,7 +31,6 @@ function closeApp(appId) {
   if (win) win.remove();
 }
 
-// Dynamically return app titles
 function getAppTitle(appId) {
   switch (appId) {
     case 'secure-docs': return '📁 Secure Docs';
@@ -44,7 +43,6 @@ function getAppTitle(appId) {
   }
 }
 
-// Inject app-specific content (can be expanded later)
 function getAppContent(appId) {
   switch (appId) {
     case 'secure-docs':
@@ -54,7 +52,7 @@ function getAppContent(appId) {
     case 'sipr':
       return `<p>SIPR interface is under construction.</p>`;
     case 'journal':
-      return `<textarea placeholder="Your encrypted journal..."></textarea>`;
+      return `<textarea placeholder="Your encrypted journal..." style="width: 100%; height: 200px;"></textarea>`;
     case 'settings':
       return `<p>Settings interface not yet implemented.</p>`;
     case 'contacts':
@@ -64,15 +62,7 @@ function getAppContent(appId) {
   }
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const toggleBtn = document.getElementById("toggle-sidebar");
-  const sidebar = document.getElementById("sidebar");
-
-  toggleBtn.addEventListener("click", () => {
-    sidebar.classList.toggle("collapsed");
-  });
-
-  function makeDraggable(win) {
+function makeDraggable(win) {
   const header = win.querySelector(".app-header");
   let offsetX = 0, offsetY = 0, isDown = false;
 
@@ -81,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     isDown = true;
     offsetX = e.clientX - win.offsetLeft;
     offsetY = e.clientY - win.offsetTop;
-    win.style.zIndex = 1000; // Bring to front
+    win.style.zIndex = 1000;
   });
 
   document.addEventListener("mousemove", (e) => {
@@ -94,5 +84,12 @@ document.addEventListener("DOMContentLoaded", () => {
     isDown = false;
   });
 }
-});
 
+document.addEventListener("DOMContentLoaded", () => {
+  const toggleBtn = document.getElementById("toggle-sidebar");
+  const sidebar = document.getElementById("sidebar");
+
+  toggleBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("collapsed");
+  });
+});
