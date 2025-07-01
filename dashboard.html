@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>House Varrick Dashboard</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="dashboard-body">
   <!-- Boot terminal -->
@@ -33,7 +34,9 @@
   </div>
 
   <div id="sidebar" class="collapsed">
-    <button id="toggle-sidebar">☰</button>
+    <button id="toggle-sidebar" class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </button>
     <div class="sidebar-buttons">
       <button onclick="openApp('docs')">📁 Secure Docs</button>
       <button onclick="openApp('chat')">💬 Internal Chat</button>
