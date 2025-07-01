@@ -5,19 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>House Varrick Dashboard</title>
   <link rel="stylesheet" href="dashboard.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="dashboard-body">
-
-  <!-- Boot Screen -->
- <div id="boot-screen" class="terminal">
-    <pre id="boot-output"><span id="typed-text"></span><span id="cursor">|</span></pre>
+  <!-- Sidebar -->
+  <div id="sidebar" class="collapsed">
+    <div class="sidebar-buttons">
+      <button onclick="openApp('journal')">Journal</button>
+      <button onclick="openApp('communications')">Comms</button>
+      <button onclick="openApp('files')">Files</button>
+    </div>
   </div>
 
-  <!-- Dashboard Content (initially hidden) -->
-  <div id="dashboard-content" class="hidden">
-    
-    <!-- House Crest -->
+  <!-- Toggle Sidebar Button -->
+  <button id="toggle-sidebar">☰</button>
+
+  <!-- Dashboard Main Content -->
+  <div id="dashboard-content" class="loaded">
     <div id="house-crest">
       <img src="crest.png" alt="House Varrick Crest" />
     </div>
@@ -29,27 +32,11 @@
       <div class="app-window">💬 Internal Chat (Coming Soon)</div>
       <div class="app-window">🌐 SIPR Browser (Coming Soon)</div>
     </div>
+
+    <!-- Dynamic Windows Area -->
+    <div id="window-area"></div>
   </div>
 
-    <!-- Sidebar -->
-    <div id="sidebar" class="collapsed">
-      <div class="sidebar-buttons">
-        <button onclick="openApp('journal')">Journal</button>
-        <button onclick="openApp('communications')">Comms</button>
-        <button onclick="openApp('files')">Files</button>
-      </div>
-    </div>
-
-    <!-- Toggle Button for Sidebar -->
-    <button id="toggle-sidebar">☰</button>
-
-    <!-- Main Dashboard Area -->
-    <div id="window-area">
-      <!-- App windows will be dynamically inserted here -->
-    </div>
-  </div>
-
-  <!-- JavaScript -->
-  <script src="main.js"></script>
+  <script src="dashboard.js"></script>
 </body>
 </html>
