@@ -84,3 +84,23 @@ function makeDraggable(win) {
     isDown = false;
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const hasSeenWelcome = localStorage.getItem("hasSeenWelcome");
+
+  if (!hasSeenWelcome) {
+    const modal = document.getElementById("welcome-modal");
+    const video = document.getElementById("welcome-video");
+    const skip = document.getElementById("skip-welcome");
+
+    modal.style.display = "flex";
+
+    const endWelcome = () => {
+      modal.style.display = "none";
+      localStorage.setItem("hasSeenWelcome", "true");
+    };
+
+    video.addEventListener("ended", endWelcome);
+    skip.addEventListener("click", endWelcome);
+  }
+});
