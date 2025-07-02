@@ -92,3 +92,14 @@
   min-height: 100vh;
   text-align: center;
 }
+
+.journal-entry {
+  background: #222;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.journal-entry small {
+  color: #ccc;
+}
