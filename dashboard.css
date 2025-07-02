@@ -36,98 +36,12 @@
   top: 20px;
   left: 20px;
   width: 80px;
-  opacity: 0;
-  transition: opacity 2s ease-in;
 }
 
 #house-crest img {
   width: 100%;
   height: auto;
   filter: drop-shadow(2px 2px 5px black);
-}
-
-#dashboard.loaded #house-crest img {
-  animation: crest-glow 2s ease-in;
-}
-
-@keyframes crest-glow {
-  0% {
-    filter: drop-shadow(0 0 0 transparent);
-  }
-  50% {
-    filter: drop-shadow(0 0 10px #ffa600);
-  }
-  100% {
-    filter: drop-shadow(0 0 5px black);
-  }
-}
-
-#sidebar {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100vh;
-  width: 220px;
-  background-color: #222;
-  color: white;
-  transition: transform 0.3s ease;
-  transform: translateX(100%); /* hidden */
-  z-index: 1000;
-}
-
-#sidebar.collapsed {
-  transform: translateX(200px); /* hide it off-screen to the right */
-}
-
-#sidebar.expanded {
-  transform: translateX(0);
-}
-
-#toggle-sidebar {
-  position: absolute;
-  top: 20px;
-  left: -45px; /* Moves outside the sidebar */
-  width: 40px;
-  height: 40px;
-  background-color: orange;
-  color: black;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
-  z-index: 1100;
-}
-
-#toggle-sidebar:hover {
-  background-color: darkorange;
-}
-
-/* Move it to the edge of the screen when collapsed */
-#sidebar.collapsed + #toggle-sidebar {
-  right: 0;
-  width: 0;
-  overflow: hidden;
-}
-
-.sidebar-buttons {
-  display: flex;
-  flex-direction: column;
-  margin-top: 80px;
-  gap: 15px;
-  padding: 0 10px;
-}
-
-.sidebar-buttons button {
-  background-color: #333;
-  color: white;
-  border: none;
-  padding: 10px;
-  font-size: 16px;
-  text-align: left;
-  cursor: pointer;
-}
-
-.sidebar-buttons button:hover {
-  background-color: #555;
 }
 
 #dashboard-content {
