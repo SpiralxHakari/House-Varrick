@@ -7,19 +7,6 @@
   padding: 20px;
 }
 
-.dashboard-content {
-  max-width: 900px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.dashboard-content {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* aligns to top instead of middle */
-  padding-top: 40px;       /* add spacing as needed */
-}
-
 .app-window {
   position: absolute;
   background: #111;
@@ -34,8 +21,10 @@
 #house-crest {
   position: absolute;
   top: 20px;
-  left: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 200px;
+  z-index: 10; /* make sure it stays above other elements */
 }
 
 #house-crest img {
@@ -45,14 +34,15 @@
 }
 
 #dashboard-content {
-  margin-left: 200px;
-  padding: 20px;
+  padding-top: 200px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 #window-area {
   margin-top: 20px;
 }
-
 
 .app-header {
   background: #222;
@@ -68,23 +58,6 @@
 .app-body {
   padding: 1em;
   background: #191919;
-}
-
-.sidebar {
-  background-color: #400000;
-  padding-top: 60px;
-  width: 200px;
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 100%;
-  box-shadow: -2px 0 5px rgba(0,0,0,0.5);
-  z-index: 1000;
-}
-
-.sidebar-item {
-  padding: 10px 15px;
-  border-bottom: 1px solid #ffa500;
 }
 
 .window-header {
