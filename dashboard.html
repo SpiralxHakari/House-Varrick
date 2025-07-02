@@ -7,18 +7,7 @@
   <link rel="stylesheet" href="dashboard.css" />
 </head>
 <body class="dashboard-body">
-  <!-- Sidebar -->
-  <div id="sidebar" class="collapsed">
-    <!-- Toggle Sidebar Button -->
-	<button id="toggle-sidebar">☰</button>
-    <div class="sidebar-buttons">
-      <!-- ... sidebar buttons ... -->
-      <button onclick="openApp('journal')">📓 Journal</button>
-      <button onclick="openApp('contacts')">📇 Contacts</button>
-	    <button onclick="openApp('settings')">⚙️ Settings</button>
-    </div>
-  </div> 
-  
+
   <!-- Dashboard Main Content -->
   <div id="dashboard-content" class="loaded">
     <div id="house-crest">
@@ -29,8 +18,11 @@
       <p>This is your secure command interface. More modules coming soon.</p>
 	  <div id="window-area" class="button-group">
 	  	<button onclick="openApp('secure-docs')">📁 Secure Docs</button>
-		<button onclick="openApp('chat')">💬 Chat</button>
-		<button onclick="openApp('sipr')">🌐 SIPR</button>
+		  <button onclick="openApp('chat')">💬 Chat</button>
+		  <button onclick="openApp('sipr')">🌐 SIPR</button>
+		  <button onclick="openApp('journal')">📓 Journal</button>
+      <button onclick="openApp('contacts')">📇 Contacts</button>
+	    <button onclick="openApp('settings')">⚙️ Settings</button>
 	  </div>
   </div>
     
