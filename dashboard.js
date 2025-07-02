@@ -73,23 +73,3 @@ function makeDraggable(win) {
 		offsetY = e.clientY - win.offsetTop;
 		win.style.zIndex = 1000;
 });
-
-	document.addEventListener("mousemove", (e) => {
-		if (!isDown) return;
-		win.style.left = ${e.clientX - offsetX}px;
-		win.style.top = ${e.clientY - offsetY}px;
-	});
-
-	document.addEventListener("mouseup", () => {
-		isDown = false;
-		});
-	}
-
-	document.getElementById('toggle-sidebar').addEventListener('click', () => {
-		const sidebar = document.getElementById("sidebar");
-		const toggle = document.getElementById("toggle-sidebar");
-
-		toggle.addEventListener("click", () => {
-		sidebar.classList.toggle("expanded");
-		sidebar.classList.toggle("collapsed");
-});
