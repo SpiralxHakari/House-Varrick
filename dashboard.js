@@ -230,4 +230,3 @@ function deleteContact(index) {
 if (appId === 'contacts') {
   setTimeout(loadContacts, 0); // Let the DOM update first
 }
-
