@@ -27,6 +27,7 @@
       <img src="crest.png" alt="House Varrick Crest" />
     </div>
 	<br>
+	
   <!-- Dashboard Main Content -->
   <div id="dashboard-content" class="loaded">
     <div id="main-content">
@@ -41,53 +42,6 @@
 		<button onclick="openApp('settings')">⚙️ Settings</button>
 	  </div>
     </div>
-    
-  <script src="dashboard.js"></script>
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>House Varrick Dashboard</title>
-  <link rel="stylesheet" href="dashboard.css" />
-</head>
-<body class="dashboard-body">
-
-  <!-- Welcome Video Modal -->
-	<div id="welcome-modal" style="display: none; position: fixed; top: 0; left: 0;
-	width: 100vw; height: 100vh; background: rgba(0,0,0,0.85); 
-	z-index: 9999; justify-content: center; align-items: center;">
-
-		<video id="welcome-video" width="800" controls autoplay>
-		<source src="welcome.mp4" type="video/mp4" />
-		Your browser does not support the video tag.
-		</video>
-
-		<button id="skip-welcome" style="position: absolute; top: 20px; right: 20px; 
-		background: #ff4444; color: white; border: none; padding: 10px 15px; 
-		font-weight: bold; cursor: pointer;">Skip</button>
-	</div>
-  
-  <!-- Dashboard Main Content -->
-  <div id="dashboard-content" class="loaded">
-    <div id="house-crest">
-      <img src="crest.png" alt="House Varrick Crest" />
-    </div>
-    <div id="main-content">
-      <h1>Welcome to the House Varrick Command Dashboard</h1>
-      <p>This is your secure command interface. More modules coming soon.</p>
-	  <div id="window-area" class="button-group">
-	  	<button onclick="openApp('secure-docs')">📁 Secure Docs</button>
-		  <button onclick="openApp('chat')">💬 Chat</button>
-		  <button onclick="openApp('sipr')">🌐 SIPR</button>
-		  <button onclick="openApp('journal')">📓 Journal</button>
-      <button onclick="openApp('contacts')">📇 Contacts</button>
-	    <button onclick="openApp('settings')">⚙️ Settings</button>
-	  </div>
-  </div>
-    
   <script src="dashboard.js"></script>
 </body>
 </html>
-
