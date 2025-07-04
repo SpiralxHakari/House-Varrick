@@ -230,3 +230,12 @@ function deleteContact(index) {
 if (appId === 'contacts') {
   setTimeout(loadContacts, 0); // Let the DOM update first
 }
+
+document.addEventListener('touchmove', function (e) {
+  if (e.touches && e.touches.length === 1) {
+    const touch = e.touches[0];
+    if (touch.clientY < 100) {
+      e.preventDefault(); // only cancel if near top
+    }
+  }
+}, { passive: false });
