@@ -1,4 +1,11 @@
 /* Dashboard Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* prevents scrolling */
+  height: 100%;
+}
+
 .dashboard-body {
   background-color: #8d1b0f;
   color: black;
@@ -15,7 +22,7 @@
   padding: 0;
   width: 300px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-  z-index: 10;
+  z-index: 20;
 }
 
 #house-crest {
@@ -93,3 +100,7 @@
   text-align: center;
 }
 
+.window {
+  position: absolute;
+  z-index: 100; /* or increment dynamically if needed */
+}
