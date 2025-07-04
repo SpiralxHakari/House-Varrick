@@ -62,7 +62,32 @@ function getAppContent(appId) {
     <script>loadJournalHistory();</script>
   `;
     case 'settings':
-      return `<p>Settings interface not yet implemented.</p>`;
+  return `
+    <div>
+    <h3>Theme</h3>
+		<select id="theme-select" onchange="applyTheme(this.value)">
+			<option value="default">Default</option>
+			<option value="havenari">Havenari</option>
+			<option value="imperial">Imperial Gilded</option>
+			<option value="crt">CRT</option>
+		</select>
+
+     <h3>Font</h3>
+		<select id="font-select" onchange="applyFont(this.value)">
+			<option value="sans-serif">Sans-serif</option>
+			<option value="serif">Serif</option>
+			<option value="monospace">Monospace</option>
+		</select>
+	  
+	<h3>Font Size</h3>
+		<select id="font-size-select" onchange="applyFontSize(this.value)">
+			<option value="small">Small</option>
+			<option value="medium" selected>Medium</option>
+			<option value="large">Large</option>
+		</select>
+    </div>
+    <script>loadSettings();</script>
+  `;
 case 'contacts':
   return `
     <div style="margin-bottom: 1em;">
@@ -239,3 +264,39 @@ document.addEventListener('touchmove', function (e) {
     }
   }
 }, { passive: false });
+
+function applyTheme(theme) {
+  document.body.dataset.theme = theme;
+  localStorage.setItem('user-theme', theme);
+}
+
+function applyFont(font) {
+  document.body.style.fontFamily = font;
+  localStorage.setItem('user-font', font);
+}
+
+function loadSettings() {
+  const theme = localStorage.getItem('user-theme') || 'default';
+  const font = localStorage.getItem('user-font') || 'sans-serif';
+  const fontSize = localStorage.getItem('user-font-size') || 'medium';
+
+  document.getElementById('theme-select').value = theme;
+  document.getElementById('font-select').value = font;
+  document.getElementById('font-size-select').value = fontSize;
+
+  applyTheme(theme);
+  applyFont(font);
+  applyFontSize(fontSize);
+}
+
+function applyFontSize(size) {
+  let fontSize;
+  switch(size) {
+    case 'small': fontSize = '12px'; break;
+    case 'medium': fontSize = '16px'; break;
+    case 'large': fontSize = '20px'; break;
+    default: fontSize = '16px';
+  }
+  document.body.style.fontSize = fontSize;
+  localStorage.setItem('user-font-size', size);
+}
