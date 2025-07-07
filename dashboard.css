@@ -4,6 +4,7 @@ html, body {
   padding: 0;
   overflow: hidden; /* prevents scrolling */
   height: 100%;
+  font-family: var(--font-family, monospace);
   font-size: var(--font-size);
   background-color: var(--bg-color);
   color: var(--text-color);
@@ -12,7 +13,7 @@ html, body {
 .dashboard-body {
   background-color: #8d1b0f;
   color: black;
-  font-family: 'Courier New', Courier, monospace;
+	font-family: '', monospace;
   margin: 0;
   padding: 20px;
 }
@@ -122,6 +123,18 @@ html, body {
   --font-size: 16px;
 }
 
+.theme-default {
+  --bg-color: #8d1b0f;
+  --text-color: #000000;
+  --accent-color: #8b5e3c;
+  --panel-color: #c2aa88;
+  --highlight-color: #a67c52;
+  --frame-color: #4b3621;
+  --font-weight: 400;
+  --font-style: normal;
+  --font-family: "Neuropol", monospace;
+}
+
 /* Havenari (Noctua-inspired) theme */
 .theme-havenari {
   --bg-color: #eae0c8;
@@ -130,16 +143,9 @@ html, body {
   --panel-color: #c2aa88;
   --highlight-color: #a67c52;
   --frame-color: #4b3621;
-}
-
-/* Dark theme */
-.theme-dark {
-  --bg-color: #121212;
-  --text-color: #f5f5f5;
-  --accent-color: #bb86fc;
-  --panel-color: #1e1e1e;
-  --highlight-color: #333333;
-  --frame-color: #444444;
+  --font-weight: 400;
+  --font-style: normal;
+  --font-family: "Neuropol", monospace;
 }
 
 /* Imperial Gilded theme */
@@ -150,6 +156,9 @@ html, body {
   --panel-color: #f8f5f0;
   --highlight-color: #d6b370; /* Brass-like */
   --frame-color: #a58c6f;
+  --font-weight: 400;
+  --font-style: normal;
+  --font-family: "Neuropol", monospace;
 }
 
 /* CRT terminal theme */
@@ -160,6 +169,9 @@ html, body {
   --panel-color: #001100;
   --highlight-color: #003300;
   --frame-color: #004400;
+  --font-weight: 400;
+  --font-style: normal;
+  --font-family: "Samsung CRT TV", monospace;
 }
 
 #settings-app {
@@ -178,19 +190,39 @@ html, body {
 body[data-theme="default"] {
   background-color: #8d1b0f;
   color: #000;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body[data-theme="havenari"] {
   background-color: #3B2F2F;
   color: #8B5E3C;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body[data-theme="imperial"] {
   background-color: #fff8e1;
   color: #6c4b00;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body[data-theme="crt"] {
   background-color: #000;
   color: #00ff00;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Samsung CRT TV';
+  src: url('/fonts/Samsung CRT TV.ttf') format('ttf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Neuropol';
+  src: url('/fonts/Neuropol.otf') format('otf');
+  font-display: swap;
 }
