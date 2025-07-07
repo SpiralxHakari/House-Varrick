@@ -72,13 +72,6 @@ function getAppContent(appId) {
 			<option value="crt">CRT</option>
 		</select>
 
-     <h3>Font</h3>
-		<select id="font-select" onchange="applyFont(this.value)">
-			<option value="sans-serif">Sans-serif</option>
-			<option value="serif">Serif</option>
-			<option value="monospace">Monospace</option>
-		</select>
-	  
 	<h3>Font Size</h3>
 		<select id="font-size-select" onchange="applyFontSize(this.value)">
 			<option value="small">Small</option>
@@ -266,26 +259,19 @@ document.addEventListener('touchmove', function (e) {
 }, { passive: false });
 
 function applyTheme(theme) {
-  document.body.dataset.theme = theme;
+  document.body.setAttribute("data-theme", theme);
   localStorage.setItem('user-theme', theme);
 }
 
-function applyFont(font) {
-  document.body.style.fontFamily = font;
-  localStorage.setItem('user-font', font);
-}
 
 function loadSettings() {
   const theme = localStorage.getItem('user-theme') || 'default';
-  const font = localStorage.getItem('user-font') || 'sans-serif';
   const fontSize = localStorage.getItem('user-font-size') || 'medium';
 
   document.getElementById('theme-select').value = theme;
-  document.getElementById('font-select').value = font;
   document.getElementById('font-size-select').value = fontSize;
 
   applyTheme(theme);
-  applyFont(font);
   applyFontSize(fontSize);
 }
 
